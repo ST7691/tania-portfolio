@@ -1,26 +1,303 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050816;
+  --foreground: #f8fafc;
+
+  --surface: #0b1020;
+  --surface-light: #111827;
+
+  --primary: #8b5cf6;
+  --secondary: #6366f1;
+  --accent: #06b6d4;
+
+  --muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.08);
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    #8b5cf6 0%,
+    #6366f1 50%,
+    #06b6d4 100%
+  );
+
+  --gradient-text: linear-gradient(
+    90deg,
+    #a78bfa 0%,
+    #818cf8 50%,
+    #22d3ee 100%
+  );
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ================================
+   Selection
+================================ */
+
+::selection {
+  background: rgba(139, 92, 246, 0.35);
+  color: #ffffff;
+}
+
+/* ================================
+   Scrollbar
+================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--primary),
+    var(--accent)
+  );
+  border-radius: 999px;
+}
+
+/* ================================
+   Container
+================================ */
+
+.container-custom {
+  width: min(100% - 32px, 1200px);
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    width: min(100% - 64px, 1200px);
+  }
+}
+
+/* ================================
+   Gradient Text
+================================ */
+
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ================================
+   Gradient Border
+================================ */
+
+.gradient-border {
+  position: relative;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    var(--gradient-primary) border-box;
+}
+
+/* ================================
+   Glass Effect
+================================ */
+
+.glass {
+  background: rgba(11, 16, 32, 0.65);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* ================================
+   Glow
+================================ */
+
+.glow-primary {
+  box-shadow:
+    0 0 40px rgba(139, 92, 246, 0.15),
+    0 0 80px rgba(99, 102, 241, 0.08);
+}
+
+.glow-accent {
+  box-shadow:
+    0 0 40px rgba(6, 182, 212, 0.15),
+    0 0 80px rgba(6, 182, 212, 0.08);
+}
+
+/* ================================
+   Background Grid
+================================ */
+
+.bg-grid {
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 48px 48px;
+}
+
+/* ================================
+   Section
+================================ */
+
+.section {
+  position: relative;
+  padding-block: 96px;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding-block: 72px;
+  }
+}
+
+/* ================================
+   Section Heading
+================================ */
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #a78bfa;
+}
+
+.section-eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+
+  background: var(--gradient-primary);
+}
+
+.section-title {
+  margin-top: 12px;
+
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+}
+
+.section-description {
+  margin-top: 18px;
+
+  max-width: 650px;
+
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* ================================
+   Button Base
+================================ */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 48px;
+  padding-inline: 22px;
+
+  border-radius: 12px;
+
+  background: var(--gradient-primary);
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  border: 0;
+
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 35px rgba(139, 92, 246, 0.25);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 48px;
+  padding-inline: 22px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    background 250ms ease,
+    border-color 250ms ease,
+    transform 250ms ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(139, 92, 246, 0.35);
+  transform: translateY(-2px);
+}
+
+/* ================================
+   Reduced Motion
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
