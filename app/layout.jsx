@@ -35,10 +35,6 @@ export const metadata = {
   creator: "Tania Akter Farhana",
   publisher: "Tania Akter Farhana",
 
-  verification: {
-    google: "IJzMcNML4owJ7yYvLO1T0BfI2-B0oW1CuehxhnH8754",
-  },
-
   robots: {
     index: true,
     follow: true,
@@ -56,9 +52,12 @@ export const metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: "Tania Akter Farhana Portfolio",
+
     title: "Tania Akter Farhana | Frontend Developer",
+
     description:
       "Explore Tania Akter Farhana's portfolio, projects, skills, and experience in React.js, Next.js, JavaScript, and modern web development.",
+
     images: [
       {
         url: "/og-image.png",
@@ -71,9 +70,12 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
+
     title: "Tania Akter Farhana | Frontend Developer",
+
     description:
       "Frontend Developer specializing in React.js, Next.js, JavaScript, and modern web development.",
+
     images: ["/og-image.png"],
   },
 
@@ -90,26 +92,26 @@ export const metadata = {
   },
 };
 
-/* ==========================================
-   ROOT LAYOUT
-========================================== */
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Search Console Verification */}
+        <meta
+          name="google-site-verification"
+          content="IJzMcNML4owJ7yYvLO1T0BfI2-B0oW1CuehxhnH8754"
+        />
+      </head>
+
       <body>
         {children}
 
-        {/* ==========================================
-            JSON-LD STRUCTURED DATA
-        ========================================== */}
-
+        {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-
               "@type": "Person",
 
               name: "Tania Akter Farhana",
@@ -148,5 +150,7 @@ export default function RootLayout({ children }) {
         />
       </body>
     </html>
+    
   );
 }
+
