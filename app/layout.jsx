@@ -87,7 +87,39 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Tania Akter Farhana",
+              jobTitle: "Frontend Web Developer",
+              description:
+                "Frontend Web Developer specializing in React.js, Next.js, JavaScript, and modern web development.",
+              url: "https://your-domain.com",
+              sameAs: ["https://github.com/ST7691"],
+              knowsAbout: [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React.js",
+                "Next.js",
+                "Tailwind CSS",
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "Firebase",
+                "REST API",
+                "Git",
+                "GitHub",
+              ],
+            }),
+          }}
+        />
+      </body>
     </html>
   );
 }
