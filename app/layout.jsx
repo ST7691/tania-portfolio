@@ -1,7 +1,9 @@
 import "./globals.css";
 
+const SITE_URL = "https://tania-portfolio-sigma.vercel.app";
+
 export const metadata = {
-  metadataBase: new URL("https://tania-portfolio.vercel.app"),
+  metadataBase: new URL(SITE_URL),
 
   title: {
     default: "Tania Akter Farhana | Frontend Developer",
@@ -48,7 +50,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://tania-portfolio.vercel.app",
+    url: SITE_URL,
     siteName: "Tania Akter Farhana Portfolio",
     title: "Tania Akter Farhana | Frontend Developer",
     description:
@@ -72,7 +74,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://tania-portfolio.vercel.app",
+    canonical: SITE_URL,
   },
 
   category: "technology",
@@ -89,18 +91,29 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {children}
+
+        {/* ==========================================
+            JSON-LD STRUCTURED DATA
+        ========================================== */}
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
+
               name: "Tania Akter Farhana",
+
               jobTitle: "Frontend Web Developer",
+
               description:
                 "Frontend Web Developer specializing in React.js, Next.js, JavaScript, and modern web development.",
-              url: "https://your-domain.com",
+
+              url: SITE_URL,
+
               sameAs: ["https://github.com/ST7691"],
+
               knowsAbout: [
                 "HTML",
                 "CSS",
@@ -108,6 +121,7 @@ export default function RootLayout({ children }) {
                 "React.js",
                 "Next.js",
                 "Tailwind CSS",
+                "DaisyUI",
                 "Node.js",
                 "Express.js",
                 "MongoDB",
@@ -115,6 +129,10 @@ export default function RootLayout({ children }) {
                 "REST API",
                 "Git",
                 "GitHub",
+                "Vercel",
+                "Axios",
+                "TanStack Query",
+                "Framer Motion",
               ],
             }),
           }}

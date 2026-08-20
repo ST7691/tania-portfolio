@@ -1,5 +1,5 @@
 export default function robots() {
-  const baseUrl = "https://your-domain.com";
+  const baseUrl = "https://tania-portfolio-sigma.vercel.app";
 
   return {
     rules: {
