@@ -5,6 +5,10 @@ const SITE_URL = "https://tania-portfolio-sigma.vercel.app";
 export const metadata = {
   metadataBase: new URL(SITE_URL),
 
+  /* ==========================================
+     BASIC SEO
+  ========================================== */
+
   title: {
     default: "Tania Akter Farhana | Frontend Developer",
     template: "%s | Tania Akter Farhana",
@@ -26,6 +30,10 @@ export const metadata = {
     "Full Stack JavaScript Developer",
   ],
 
+  /* ==========================================
+     AUTHOR
+  ========================================== */
+
   authors: [
     {
       name: "Tania Akter Farhana",
@@ -35,9 +43,22 @@ export const metadata = {
   creator: "Tania Akter Farhana",
   publisher: "Tania Akter Farhana",
 
+  /* ==========================================
+     GOOGLE SEARCH CONSOLE VERIFICATION
+  ========================================== */
+
+  verification: {
+    google: "IJzMcNML4owJ7yYvLO1T0BfI2-B0oW1CuehxhnH8754",
+  },
+
+  /* ==========================================
+     ROBOTS
+  ========================================== */
+
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
@@ -47,14 +68,23 @@ export const metadata = {
     },
   },
 
+  /* ==========================================
+     OPEN GRAPH
+  ========================================== */
+
   openGraph: {
     type: "website",
     locale: "en_US",
+
     url: SITE_URL,
+
     siteName: "Tania Akter Farhana Portfolio",
+
     title: "Tania Akter Farhana | Frontend Developer",
+
     description:
       "Explore Tania Akter Farhana's portfolio, projects, skills, and experience in React.js, Next.js, JavaScript, and modern web development.",
+
     images: [
       {
         url: "/og-image.png",
@@ -65,19 +95,38 @@ export const metadata = {
     ],
   },
 
+  /* ==========================================
+     TWITTER / X
+  ========================================== */
+
   twitter: {
     card: "summary_large_image",
+
     title: "Tania Akter Farhana | Frontend Developer",
+
     description:
       "Frontend Developer specializing in React.js, Next.js, JavaScript, and modern web development.",
+
     images: ["/og-image.png"],
   },
+
+  /* ==========================================
+     CANONICAL URL
+  ========================================== */
 
   alternates: {
     canonical: SITE_URL,
   },
 
+  /* ==========================================
+     CATEGORY
+  ========================================== */
+
   category: "technology",
+
+  /* ==========================================
+     ICONS
+  ========================================== */
 
   icons: {
     icon: "/favicon.ico",
@@ -85,6 +134,10 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
 };
+
+/* ==========================================
+   ROOT LAYOUT
+========================================== */
 
 export default function RootLayout({ children }) {
   return (
@@ -101,6 +154,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
+
               "@type": "Person",
 
               name: "Tania Akter Farhana",
