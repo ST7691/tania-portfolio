@@ -1,3 +1,4 @@
+
 export const skillCategories = [
   {
     id: "frontend",
@@ -40,6 +41,32 @@ export const skillCategories = [
         percentage: 90,
         description: "Responsive and scalable utility-first UI development.",
       },
+      {
+        name: "TanStack Query",
+        level: "Intermediate",
+        percentage: 75,
+        description:
+          "Server-state management, data fetching, caching and mutations.",
+      },
+      {
+        name: "Zustand",
+        level: "Intermediate",
+        percentage: 70,
+        description:
+          "Lightweight global state management for React applications.",
+      },
+      {
+        name: "DaisyUI",
+        level: "Intermediate",
+        percentage: 78,
+        description: "Reusable UI components built on Tailwind CSS.",
+      },
+      {
+        name: "Framer Motion",
+        level: "Intermediate",
+        percentage: 72,
+        description: "Interactive animations and motion-enhanced user interfaces.",
+      },
     ],
   },
 
@@ -57,20 +84,40 @@ export const skillCategories = [
         name: "Express.js",
         level: "Intermediate",
         percentage: 75,
-        description: "REST API development and backend routing.",
+        description: "REST API development, middleware and backend routing.",
+      },
+      {
+        name: "Golang",
+        level: "Beginner",
+        percentage: 35,
+        description:
+          "Learning Go fundamentals, concurrency and backend development.",
       },
       {
         name: "REST API",
-        level: "Advanced",
+        level: "Intermediate",
         percentage: 82,
         description:
-          "Consuming and integrating frontend applications with APIs.",
+          "Designing, developing and integrating RESTful web APIs.",
+      },
+      {
+        name: "Authentication",
+        level: "Intermediate",
+        percentage: 72,
+        description:
+          "User authentication, authorization and session management.",
       },
       {
         name: "Axios",
         level: "Advanced",
         percentage: 88,
         description: "HTTP requests, API integration and error handling.",
+      },
+      {
+        name: "NextAuth.js",
+        level: "Intermediate",
+        percentage: 70,
+        description: "Authentication workflows for Next.js applications.",
       },
     ],
   },
@@ -79,6 +126,20 @@ export const skillCategories = [
     id: "database",
     label: "Database",
     skills: [
+      {
+        name: "PostgreSQL",
+        level: "Intermediate",
+        percentage: 70,
+        description:
+          "Relational database design, SQL queries and data management.",
+      },
+      {
+        name: "Prisma ORM",
+        level: "Intermediate",
+        percentage: 72,
+        description:
+          "Database access, schema modeling and migrations with Prisma.",
+      },
       {
         name: "MongoDB",
         level: "Intermediate",
@@ -93,23 +154,37 @@ export const skillCategories = [
           "Cloud database configuration and application integration.",
       },
       {
+        name: "Redis",
+        level: "Beginner",
+        percentage: 35,
+        description:
+          "Learning in-memory data storage, caching and fast data access.",
+      },
+      {
+        name: "MySQL",
+        level: "Beginner",
+        percentage: 40,
+        description:
+          "SQL fundamentals, relational data and database queries.",
+      },
+      {
         name: "Firebase",
         level: "Intermediate",
         percentage: 72,
-        description: "Authentication and frontend application services.",
+        description: "Authentication and cloud application services.",
       },
     ],
   },
 
   {
-    id: "tools",
-    label: "Tools & Services",
+    id: "devops",
+    label: "DevOps & Cloud",
     skills: [
       {
         name: "Git",
         level: "Intermediate",
         percentage: 80,
-        description: "Version control and collaborative development workflow.",
+        description: "Version control and collaborative development workflows.",
       },
       {
         name: "GitHub",
@@ -118,10 +193,18 @@ export const skillCategories = [
         description: "Repository management and project collaboration.",
       },
       {
-        name: "Stripe",
-        level: "Intermediate",
-        percentage: 70,
-        description: "Payment integration for web applications.",
+        name: "Docker",
+        level: "Beginner",
+        percentage: 40,
+        description:
+          "Learning containerization, Dockerfiles and container workflows.",
+      },
+      {
+        name: "AWS",
+        level: "Beginner",
+        percentage: 30,
+        description:
+          "Learning cloud infrastructure and core AWS services.",
       },
       {
         name: "Vercel",
@@ -129,6 +212,52 @@ export const skillCategories = [
         percentage: 78,
         description: "Deployment and hosting for modern web applications.",
       },
+      {
+        name: "CI/CD",
+        level: "Beginner",
+        percentage: 30,
+        description:
+          "Learning automated testing, builds and deployment pipelines.",
+      },
+      {
+        name: "Linux & CLI",
+        level: "Beginner",
+        percentage: 40,
+        description:
+          "Command-line navigation, development commands and Linux basics.",
+      },
+    ],
+  },
+
+  {
+    id: "tools",
+    label: "Tools & Integrations",
+    skills: [
+      {
+        name: "Stripe",
+        level: "Intermediate",
+        percentage: 70,
+        description: "Payment integration for web applications.",
+      },
+      {
+        name: "Postman",
+        level: "Intermediate",
+        percentage: 75,
+        description: "Testing API endpoints, requests and responses.",
+      },
+      {
+        name: "Cloudinary",
+        level: "Intermediate",
+        percentage: 65,
+        description: "Cloud-based image uploads and media management.",
+      },
+      {
+        name: "VS Code",
+        level: "Advanced",
+        percentage: 85,
+        description: "Code editing, debugging and development workflows.",
+      },
     ],
   },
 ];
+

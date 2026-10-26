@@ -1,23 +1,16 @@
 export const projects = [
-  // busgo 
+  // BusGo
   {
     id: "busgo",
     slug: "busgo",
-
     title: "BusGo",
-
     category: "Full-Stack Web Application",
-
     role: "Frontend / Full-Stack Developer",
-
     description:
       "A modern bus ticket booking platform designed to make searching, seat selection, booking and payment simple and user-friendly.",
-
     longDescription:
       "BusGo is a full-stack transportation booking platform focused on creating a smooth journey from bus discovery to ticket booking and payment.",
-
     image: "/projects/busgo.png",
-
     technologies: [
       "Next.js",
       "React",
@@ -29,7 +22,6 @@ export const projects = [
       "Stripe",
       "NextAuth",
     ],
-
     features: [
       "Bus search and filtering",
       "Seat selection",
@@ -39,41 +31,29 @@ export const projects = [
       "Booking history",
       "Admin dashboard",
     ],
-
     challenge:
       "The main challenge was creating a booking experience where users could easily search routes, choose seats and complete payments without unnecessary complexity.",
-
     solution:
       "I structured the application into reusable components and separated the booking, authentication, payment and administrative workflows. The interface was designed with responsive layouts so the booking flow remains easy to use across desktop and mobile devices.",
-
     results:
       "The project demonstrates a complete modern booking workflow with authentication, database integration, payment processing and an administrative management interface.",
-
     liveUrl: "https://busgo-gold.vercel.app",
-
     githubUrl: "https://github.com/ST7691",
-
     featured: true,
   },
-// zapshift
+
+  // ZapShift
   {
     id: "zapshift",
     slug: "zapshift",
-
     title: "ZapShift",
-
     category: "Parcel Delivery Platform",
-
     role: "Frontend / Full-Stack Developer",
-
     description:
       "A courier and parcel delivery management platform with parcel tracking, rider assignment, payments and administrative tools.",
-
     longDescription:
       "ZapShift is a parcel delivery application connecting customers, riders and administrators through a structured delivery workflow.",
-
     image: "/projects/zapshift.png",
-
     technologies: [
       "React",
       "JavaScript",
@@ -84,7 +64,6 @@ export const projects = [
       "MongoDB",
       "Stripe",
     ],
-
     features: [
       "Parcel booking",
       "Parcel tracking",
@@ -93,41 +72,29 @@ export const projects = [
       "Admin dashboard",
       "Responsive interface",
     ],
-
     challenge:
       "The challenge was organizing different user workflows such as customers, riders and administrators while keeping the application simple to navigate.",
-
     solution:
       "I created separate application flows for different user responsibilities and connected the frontend with backend APIs and MongoDB for managing parcel and delivery information.",
-
     results:
       "The application provides a practical delivery management workflow with parcel booking, tracking, payment and administrative functionality.",
-
     liveUrl: "#",
-
     githubUrl: "https://github.com/ST7691",
-
     featured: true,
   },
-// kid section
+
+  // Kid Section E-commerce
   {
     id: "ecommerce",
     slug: "ecommerce",
-
     title: "Kid-section E-commerce",
-
     category: "E-commerce Application",
-
-    role: "Full stack / Frontend Developer",
-
+    role: "Full-Stack / Frontend Developer",
     description:
       "A responsive e-commerce experience with product browsing, authentication, cart management and a modern checkout flow.",
-
     longDescription:
       "A modern shopping platform focused on intuitive product discovery, responsive UI and a smooth customer journey.",
-
     image: "/projects/kid-section.png",
-
     technologies: [
       "React",
       "JavaScript",
@@ -136,7 +103,6 @@ export const projects = [
       "MongoDB",
       "REST API",
     ],
-
     features: [
       "Product browsing",
       "Product details",
@@ -145,20 +111,86 @@ export const projects = [
       "Responsive design",
       "API integration",
     ],
-
     challenge:
       "The goal was to create a clean shopping experience where users could quickly discover products and move through the purchasing journey naturally.",
-
     solution:
       "I implemented reusable product components, responsive layouts, authentication and API-driven product data while keeping the interface focused on usability.",
-
     results:
       "The project demonstrates a complete frontend shopping experience with authentication, product management and responsive user interfaces.",
-
     liveUrl: "https://kids-section.vercel.app",
-
     githubUrl: "https://github.com/ST7691",
+    featured: true,
+  },
 
+  // Team196 Global
+  {
+    id: "team196-global",
+    slug: "team196-global",
+    title: "Team196 Global",
+    category: "Corporate Website",
+    role: "Web Developer",
+    description:
+      "A corporate website presenting company information, services, and its online brand presence.",
+    longDescription:
+      "Team196 Global is a professional corporate platform crafted to communicate business operations, present corporate services, and strengthen online brand presence.",
+    image: "/projects/team196-global.png",
+    technologies: ["Next.js", "React", "JavaScript", "Tailwind CSS"],
+    features: [
+      "Corporate information",
+      "Service presentation",
+      "Responsive layout",
+      "Website navigation",
+    ],
+    challenge:
+      "Building a clean, fast-loading, and corporate-aligned web presence that works seamlessly across all screen sizes.",
+    solution:
+      "Designed and structured responsive components with modular code structures to present corporate details clearly and efficiently.",
+    results:
+      "Successfully delivered a fully responsive, modern corporate web platform that establishes a clear online brand presence.",
+    liveUrl: "https://team196global.com",
+    githubUrl: "https://github.com/ST7691",
+    featured: true,
+  },
+
+  // ST Restaurant
+  {
+    id: "st-restaurant",
+    slug: "st-restaurant",
+    title: "ST Restaurant",
+    category: "Restaurant Management & Ordering",
+    role: "Full-Stack Developer",
+    description:
+      "A premium restaurant website with online ordering, checkout, payment integration, and an admin dashboard.",
+    longDescription:
+      "ST Restaurant is a comprehensive web solution designed for modern food venues, supporting dynamic menu listings, real-time online ordering, and robust back-office order management.",
+    image: "/projects/st-restaurant.png",
+    technologies: [
+      "Next.js",
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Prisma",
+      "NextAuth",
+      "Stripe",
+    ],
+    features: [
+      "Dynamic menu and category management",
+      "Shopping cart and checkout",
+      "User authentication",
+      "Order management",
+      "Payment integration",
+      "Admin dashboard",
+      "Responsive design",
+    ],
+    challenge:
+      "Managing complex relational data models like dynamic menu categories, customization options, and order states while maintaining rapid checkout speeds.",
+    solution:
+      "Utilized Prisma ORM with PostgreSQL for optimized data fetching, NextAuth for secure session management, and Stripe for seamless online payments.",
+    results:
+      "Delivered a feature-rich, full-stack digital ordering ecosystem tailored for modern restaurant administration and guest convenience.",
+    liveUrl: "https://st-etoile.vercel.app",
+    githubUrl: "https://github.com/ST7691",
     featured: true,
   },
 ];

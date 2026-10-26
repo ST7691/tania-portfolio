@@ -1,34 +1,64 @@
+
 import "./globals.css";
 
 const SITE_URL = "https://tania-portfolio-sigma.vercel.app";
+
+const SITE_TITLE = "Tania Akter Farhana | Software Engineer & Full Stack Developer";
+
+const SITE_DESCRIPTION =
+  "Tania Akter Farhana is a Software Engineer and Full Stack Web Developer specializing in React.js, Next.js, JavaScript, Node.js, Express.js, PostgreSQL, Golang, Docker, AWS, REST APIs, and modern web application development.";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: {
-    default: "Tania Akter Farhana | Frontend Developer",
+    default: SITE_TITLE,
     template: "%s | Tania Akter Farhana",
   },
 
-  description:
-    "Tania Akter Farhana is a Frontend Web Developer specializing in React.js, Next.js, JavaScript, Tailwind CSS, and modern web application development.",
+  description: SITE_DESCRIPTION,
 
   keywords: [
     "Tania Akter Farhana",
+    "Software Engineer",
+    "Software Developer",
+    "Full Stack Developer",
+    "Full Stack Software Engineer",
     "Frontend Developer",
+    "Backend Developer",
+    "Web Developer",
+    "JavaScript Developer",
     "React.js Developer",
     "Next.js Developer",
-    "JavaScript Developer",
-    "Web Developer Bangladesh",
-    "React Developer Bangladesh",
+    "Node.js Developer",
+    "Express.js Developer",
+    "Golang Developer",
+    "Go Backend Developer",
+    "Backend Software Engineer",
+    "Docker",
+    "AWS",
+    "Cloud Computing",
+    "DevOps Fundamentals",
+    "PostgreSQL",
+    "MySQL",
+    "MongoDB",
+    "REST API Development",
+    "API Development",
+    "Database Design",
     "Next.js Developer Bangladesh",
-    "Frontend Web Developer",
-    "Full Stack JavaScript Developer",
+    "Software Engineer Bangladesh",
+    "Backend Developer Bangladesh",
+    "Remote Software Engineer",
+    "Remote Full Stack Developer",
+    "Git",
+    "GitHub",
+    "Vercel",
   ],
 
   authors: [
     {
       name: "Tania Akter Farhana",
+      url: SITE_URL,
     },
   ],
 
@@ -53,32 +83,25 @@ export const metadata = {
     url: SITE_URL,
     siteName: "Tania Akter Farhana Portfolio",
 
-    title: "Tania Akter Farhana | Frontend Developer",
-
-    description:
-      "Explore Tania Akter Farhana's portfolio, projects, skills, and experience in React.js, Next.js, JavaScript, and modern web development.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
 
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Tania Akter Farhana - Frontend Developer",
+        alt: "Tania Akter Farhana - Software Engineer and Full Stack Developer",
       },
     ],
   },
 
-  twitter: {
-    card: "summary_large_image",
-
-    title: "Tania Akter Farhana | Frontend Developer",
-
-    description:
-      "Frontend Developer specializing in React.js, Next.js, JavaScript, and modern web development.",
-
-    images: ["/og-image.png"],
-  },
-
+twitter: {
+  card: "summary_large_image",
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  images: ["/og-image.png"],
+},
   alternates: {
     canonical: SITE_URL,
   },
@@ -93,6 +116,66 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+
+    name: "Tania Akter Farhana",
+    url: SITE_URL,
+
+    jobTitle: [
+      "Software Engineer",
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer",
+    ],
+
+    description: SITE_DESCRIPTION,
+
+    sameAs: [
+      "https://github.com/ST7691",
+      "https://www.linkedin.com/in/tania-akter-farhana-0b67383b7",
+    ],
+
+    knowsAbout: [
+      "Software Engineering",
+      "Full Stack Web Development",
+      "Frontend Development",
+      "Backend Development",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "Golang",
+      "Go Programming Language",
+      "REST API Development",
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Database Design",
+      "Authentication",
+      "Payment Integration",
+      "Docker",
+      "AWS",
+      "Cloud Computing",
+      "DevOps",
+      "Git",
+      "GitHub",
+      "Tailwind CSS",
+      "DaisyUI",
+      "Firebase",
+      "TanStack Query",
+      "Axios",
+      "Framer Motion",
+      "NextAuth",
+      "Prisma",
+      "Vercel",
+    ],
+  };
+
   return (
     <html lang="en">
       <head>
@@ -106,51 +189,14 @@ export default function RootLayout({ children }) {
       <body>
         {children}
 
-        {/* JSON-LD Structured Data */}
+        {/* Person Structured Data for Search Engines */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-
-              name: "Tania Akter Farhana",
-
-              jobTitle: "Frontend Web Developer",
-
-              description:
-                "Frontend Web Developer specializing in React.js, Next.js, JavaScript, and modern web development.",
-
-              url: SITE_URL,
-
-              sameAs: ["https://github.com/ST7691"],
-
-              knowsAbout: [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "React.js",
-                "Next.js",
-                "Tailwind CSS",
-                "DaisyUI",
-                "Node.js",
-                "Express.js",
-                "MongoDB",
-                "Firebase",
-                "REST API",
-                "Git",
-                "GitHub",
-                "Vercel",
-                "Axios",
-                "TanStack Query",
-                "Framer Motion",
-              ],
-            }),
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
           }}
         />
       </body>
     </html>
-    
   );
 }
-
